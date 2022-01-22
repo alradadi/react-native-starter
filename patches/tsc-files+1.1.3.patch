@@ -1,0 +1,13 @@
+diff --git a/node_modules/tsc-files/lib/index.js b/node_modules/tsc-files/lib/index.js
+index f606859..0a3ab8c 100755
+--- a/node_modules/tsc-files/lib/index.js
++++ b/node_modules/tsc-files/lib/index.js
+@@ -36,7 +36,7 @@ const tmpTsconfig = {
+     skipLibCheck: true,
+   },
+   files,
+-  include: [],
++  include: ['./src/types/**/*'],
+ }
+ fs.writeFileSync(tmpTsconfigPath, JSON.stringify(tmpTsconfig, null, 2))
+ 

@@ -1,5 +1,5 @@
-import commonStrings from '@/src/common/assets/strings';
+import { merge } from 'lodash';
 
-import { formatResources } from './formatResources';
+import { commonStrings } from '@/src/common/assets/strings';
 
-export const resources = formatResources([commonStrings]);
+export const resources = merge({}, commonStrings);

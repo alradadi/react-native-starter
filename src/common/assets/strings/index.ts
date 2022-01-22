@@ -1,6 +1,6 @@
-import { createNamespace } from '@/src/i18n/createNamespace';
+import { createResource } from '@/src/i18n/createResource';
 
 import ar from './ar.json';
 import en from './en.json';
 
-export default createNamespace('common', { en, ar });
+export const commonStrings = createResource('common', { en, ar });

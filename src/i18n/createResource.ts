@@ -12,8 +12,8 @@ type Strings<S1 extends Dict, S2 extends Dict> = {
 };
 
 type Resource<N extends string, S1, S2> = {
-  en: Dict<N, S1>;
-  ar: Dict<N, S2>;
+  en: Record<N, S1>;
+  ar: Record<N, S2>;
 };
 
 /**

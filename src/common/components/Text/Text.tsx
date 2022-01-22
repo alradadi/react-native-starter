@@ -1,6 +1,7 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { StyleSheet, Text as RNText, TextProps } from 'react-native';
+import { StyleSheet, TextProps } from 'react-native';
+import Theme from 'react-native-theming';
 
 import { TextSize } from '@/src/theme/const';
 
@@ -48,10 +49,10 @@ const Text = ({
     !!ml && { marginLeft: ml },
   ];
 
-  return <RNText style={allStyles} {...restProps} />;
+  return <Theme.Text style={allStyles} {...restProps} />;
 };
 
-export default memo(Text);
+export default Text;
 
 const styles = StyleSheet.create({
   bold: {

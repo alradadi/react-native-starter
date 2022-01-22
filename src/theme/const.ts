@@ -17,9 +17,9 @@ export enum Color {
 export const spacing = (factor: number) => 4 * factor;
 
 export enum Radius {
-  Small = 8.0,
-  Medium = 12.0,
-  Large = 16.0,
+  Small = 8,
+  Medium = 12,
+  Large = 16,
 }
 
 export enum TextSize {

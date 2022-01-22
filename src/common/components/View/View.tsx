@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { View as RNView, ViewProps } from 'react-native';
+import { ViewProps } from 'react-native';
+import Theme from 'react-native-theming';
 
 type Props = ViewProps;
 
@@ -9,7 +10,7 @@ const View = ({ style, ...props }: Props) => {
 
   const direction = i18n.dir();
 
-  return <RNView style={[style, { direction }]} {...props} />;
+  return <Theme.View style={[style, { direction }]} {...props} />;
 };
 
 export default View;

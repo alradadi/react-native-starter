@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@colors": "npm:material-ui-colors",
     "@react-native-async-storage/async-storage": "^1.15.15",
     "i18next": "^21.6.6",
     "lodash": "^4.17.21",
@@ -56,6 +57,9 @@
     ]
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["tsc --skipLibCheck --noEmit","eslint --cache --fix --quiet"]
+    "*.{js,jsx,ts,tsx}": [
+      "tsc --skipLibCheck --noEmit",
+      "eslint --cache --fix --quiet"
+    ]
   }
 }

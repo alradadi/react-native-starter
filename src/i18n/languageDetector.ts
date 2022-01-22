@@ -6,7 +6,7 @@ import { setLanguage } from './setLanguage';
 export const languageDetector: LanguageDetectorAsyncModule = {
   type: 'languageDetector',
   async: true,
-  init: () => undefined,
+  init: () => {},
   detect: async callback => {
     const language = await getPreferredLanguage();
     callback(language);

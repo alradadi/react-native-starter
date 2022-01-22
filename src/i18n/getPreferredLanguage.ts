@@ -9,8 +9,8 @@ export const getPreferredLanguage = async () => {
       return storedLanguage;
     }
     return getDeviceLanguage();
-  } catch (e) {
-    console.error(e);
+  } catch (error) {
+    console.error(error);
     return 'en';
   }
 };

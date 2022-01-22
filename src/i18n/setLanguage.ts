@@ -7,7 +7,7 @@ export const setLanguage = async (language: string) => {
     const isRTL = i18next.dir(language) === 'rtl';
     I18nManager.forceRTL(isRTL);
     await AsyncStorage.setItem('language', language);
-  } catch (e) {
-    console.error(e);
+  } catch (error) {
+    console.error(error);
   }
 };

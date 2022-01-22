@@ -1,10 +1,5 @@
 type Opt<T> = T | undefined;
 
-interface Dict<T = any> {
-  [key: string]: T;
-}
-
-interface Location {
-  latitude: number;
-  longitude: number;
-}
+type Dict<K extends string | number = string, T = any> = {
+  [key in K]: T;
+};

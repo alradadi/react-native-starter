@@ -2,22 +2,18 @@ import { Diff } from 'utility-types';
 
 type Exact<A, B> = A extends B ? (B extends A ? true : false) : false;
 
-type EnforceExact<A extends object, B extends object> = Exact<A, B> extends true
+type EnforceExact<A extends Dict, B extends Dict> = Exact<A, B> extends true
   ? A
   : Diff<B, A>;
 
-type Strings<S1 extends object, S2 extends object> = {
+type Strings<S1 extends Dict, S2 extends Dict> = {
   en: EnforceExact<S1, S2>;
   ar: EnforceExact<S2, S1>;
 };
 
 type Resource<N extends string, S1, S2> = {
-  en: {
-    [key in N]: S1;
-  };
-  ar: {
-    [key in N]: S2;
-  };
+  en: Dict<N, S1>;
+  ar: Dict<N, S2>;
 };
 
 /**
@@ -26,8 +22,8 @@ type Resource<N extends string, S1, S2> = {
  */
 export const createResource = <
   N extends string,
-  S1 extends object,
-  S2 extends object,
+  S1 extends Dict,
+  S2 extends Dict,
 >(
   namespace: N,
   strings: Strings<S1, S2>,

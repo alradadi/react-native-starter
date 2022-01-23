@@ -1,3 +1,5 @@
+## Structure
+
 This app is broken into different modules. Each module is broken into the following folders:
 - assets
     - images
@@ -11,10 +13,25 @@ This app is broken into different modules. Each module is broken into the follow
 - services
 - utils
 
+## Debugging
+
+The main debugger used for this application is Flipper with many of its extensions and plugins.
+
+### Install Flipper
+```bash
+brew install --cask flipper
+```
 
 ## Troubleshooting
 
-### With VSCode
+### Environment
+
+Make sure your environment is properly setup to run react native apps. Use the command below and find out what you're missing.
+```bash
+npx @react-native-community/cli doctor
+```
+
+### Eslint With VSCode
 
 ESLint will not lint `.ts` or `.tsx` files in VSCode by default, you need to set your `.vscode/settings.json` like this:
 

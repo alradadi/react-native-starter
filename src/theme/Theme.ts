@@ -11,12 +11,12 @@ class Theme {
 
   #themes: Dict<ThemeType> = {};
 
-  constructor() {
+  init = () => {
     this.#themes = mapValues(appThemes, (theme, name) =>
       createTheme(theme, name),
     );
     this.restore();
-  }
+  };
 
   /**
    * gets current theme

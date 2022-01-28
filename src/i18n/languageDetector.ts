@@ -1,15 +1,11 @@
-import { LanguageDetectorAsyncModule } from 'i18next';
+import { LanguageDetectorModule } from 'i18next';
 
 import { getPreferredLanguage } from './getPreferredLanguage';
 import { setLanguage } from './setLanguage';
 
-export const languageDetector: LanguageDetectorAsyncModule = {
+export const languageDetector: LanguageDetectorModule = {
   type: 'languageDetector',
-  async: true,
   init: () => {},
-  detect: async callback => {
-    const language = await getPreferredLanguage();
-    callback(language);
-  },
+  detect: getPreferredLanguage,
   cacheUserLanguage: setLanguage,
 };

@@ -13,12 +13,12 @@
   },
   "dependencies": {
     "@colors": "npm:material-ui-colors",
-    "@react-native-async-storage/async-storage": "^1.15.15",
     "i18next": "^21.6.6",
     "lodash": "^4.17.21",
     "react": "17.0.2",
     "react-i18next": "^11.15.3",
     "react-native": "0.66.4",
+    "react-native-mmkv": "^2.0.0",
     "react-native-theming": "^1.0.21",
     "utility-types": "^3.10.0"
   },

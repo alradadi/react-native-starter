@@ -5,12 +5,10 @@ import Theme from 'react-native-theming';
 
 type Props = ViewProps;
 
-const View = ({ style, ...props }: Props) => {
+export const View = ({ style, ...props }: Props) => {
   const { i18n } = useTranslation();
 
   const direction = i18n.dir();
 
   return <Theme.View style={[style, { direction }]} {...props} />;
 };
-
-export default View;

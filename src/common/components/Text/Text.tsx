@@ -18,7 +18,7 @@ interface Props extends TextProps {
   ml?: number;
 }
 
-const Text = ({
+export const Text = ({
   bold,
   size,
   light,
@@ -51,8 +51,6 @@ const Text = ({
 
   return <Theme.Text style={allStyles} {...restProps} />;
 };
-
-export default Text;
 
 const styles = StyleSheet.create({
   bold: {

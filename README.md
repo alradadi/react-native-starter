@@ -22,6 +22,12 @@ The main debugger used for this application is Flipper with many of its extensio
 brew install --cask flipper
 ```
 
+## Style Guidelines
+
+- This app uses the popular Airbnb style guidelines which is enforced by Eslint.
+- It also uses some additional rules from popular eslint configurations (see `.eslintrc.js`).
+- Don't use default exports. [Read this.](https://basarat.gitbook.io/typescript/main-1/defaultisbad)
+
 ## Troubleshooting
 
 ### Environment
